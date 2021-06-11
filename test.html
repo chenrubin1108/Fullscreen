@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="陈如斌">
+    <title></title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <button id="test">123</button>
+    <video controls id="myvideo">
+        <source src="./flower.webm"></source>
+      
+      </video>
+
+<script>
+var elem = document.getElementById("myvideo");
+var ele = document.getElementById("test");
+// console.log("是否存在",elem.requestFullscreen)
+
+ele.addEventListener("click",function(){
+  console.log(1)
+if (ele.mozRequestFullScreen) {
+      ele.mozRequestFullScreen();
+   } else if ( ele .requestFullscreen) {
+      ele.requestFullscreen();
+   } else if (ele .webkitRequestFullScreen) {
+      ele.webkitRequestFullScreen();
+   }
+})
+
+</script>
+</body>
+</html>
